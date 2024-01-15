@@ -1,0 +1,177 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+body {
+    background-image: url(./images/pexels-blue-arauz-8562973.jpg);
+    background-size: cover;
+    background-position: center;
+    background-color: black;
+}
+
+li {
+    list-style: none;
+}
+
+a {
+    text-decoration: none;
+    color: white;
+    font-size: 1rem;
+}
+
+a:hover {
+    color: rgb(255, 185, 50);
+}
+
+/*Header*/
+
+header {
+    position: relative;
+    padding: 0 2rem;
+}
+
+.navbar {
+    height: 60px;
+    width: 100%;
+    height: 60px;
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.navbar .logo a {
+    font-size: 1.5rem;
+    font-weight: bold;
+}
+
+.navbar .nav-links {
+    display: flex;
+    gap: 2rem;
+}
+
+.navbar .toggle-btn {
+    color: #fff;
+    font-size: 1.5rem;
+    display: none;
+}
+
+.toggle-btn:active {
+    transform: scale(0.95);
+    color: rgb(255, 185, 50);
+}
+
+.action-btn {
+    background-color: rgb(255, 185, 50);
+    padding: 0.5rem 1rem;
+    color: #fff;
+    border-radius: 20px;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    font-weight: bold;
+    font-size: .85rem;
+    transition: scale 200ms ease;
+}
+
+.action-btn:hover {
+    scale: 1.05;
+    color: #fff;
+}
+
+.action-btn:active {
+    scale: .95;
+}
+
+
+
+
+
+/* Responsive Design */
+
+@media (max-width: 992px) {
+    .navbar .nav-links, .navbar .action-btn {
+        display: none;
+    }
+
+    .navbar .toggle-btn {
+        display: block;
+    }
+
+    .dropdown-menu {
+        display: block;
+    }
+
+    .hero {
+        padding: 0 2rem;
+    }
+
+}
+
+
+
+/* Dropdown Menu */
+
+.dropdown-menu {
+    display: none;
+    position: absolute;
+    right: 2rem;
+    top: 60px;
+    width: 70%;
+    background-color: #ffffff1a;
+    backdrop-filter: blur(5px);
+    padding: 1rem;
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+.dropdown-menu.active {
+    display: block;
+}
+
+.dropdown-menu li {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0.7rem 0;
+}
+
+.dropdown-menu .action-btn {
+    width: 100%;
+    text-align: center;
+    padding: 0.5rem 0;
+
+}
+
+.dropdown-menu .link:hover {
+    background-color: #ffffff1a;
+    border-radius: 10px;
+}
+
+
+/* Hero Section */
+
+.hero {
+    width: 100%;
+    height: 90vh;
+    max-width: 1200px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin: 0 auto;
+    color: #fff;
+}
+
+.hero span {
+    color: rgb(255, 185, 50);  
+}
+
+.hero a {
+    font-size: 2rem;
+}
